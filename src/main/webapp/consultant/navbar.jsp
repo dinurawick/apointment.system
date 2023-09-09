@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">THE JOB</a>
+    <a class="navbar-brand" href="#">NAME LOGO</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,45 +13,30 @@
           <a class="nav-link active" aria-current="page" href="index.jsp">Home</a>
         </li>
        <li class="nav-item">
-          <a class="nav-link" href="">About Us</a>
+          <a class="nav-link" href="customers.jsp">Appointments</a>
         </li>
         
-      	<c:if test="${ empty userObj }">
+      	<c:if test="${ empty consultObj }">
    
-    	 <li class="nav-item">
-          <a class="nav-link" href="user-login.jsp"> User Login</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="admin-login.jsp">Admin Login</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="consultant-login.jsp">Consultant Login</a>
-        </li>
-    	
+    	 
     	  </c:if>
     	   
-      <c:if test="${ not empty userObj }">
-       <li class="nav-item">
-          <a class="nav-link" href="appointment.jsp">Schedule Appointment</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="view_appointment.jsp">View Appointment</a>
-        </li>
+      <c:if test="${ not empty consultObj }">
+     
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ${consultObj.fullName}
+            ${userObj.fullName}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="changepassword.jsp">Change Password</a></li>
+              <li><a class="dropdown-item" href="edit_profile.jsp">Change Password</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="userLogout">Logout</a></li>
+            <li><a class="dropdown-item" href="../consultLogout">Logout</a></li>
           </ul>
         </li>
       </c:if>
         
       </ul>
-     
-        
+      
     </div>
   </div>
 </nav>
