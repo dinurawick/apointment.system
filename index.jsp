@@ -61,7 +61,7 @@ font-color:white;
 </div>
 
 
-<div class="container p-3">
+<div class="container p-3" id="about">
 		<p class="text-center fs-2 ">Key Features of Our Service</p>
 
 		<div class="row">
